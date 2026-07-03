@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Car Details — Kaifksi Showroom</title>
+  <meta name="description" content="Full specifications, gallery, and pricing for our featured supercars at Kaifksi Showroom." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/detail.css" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR (shared) ========== -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo" id="logo-link">
+        <span class="logo-icon">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
+            <path d="M2 22L8 10L16 18L22 8L30 22" stroke="#39FF14" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16 18L20 14" stroke="#39FF14" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="logo-text">KAIFKSI</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#home" class="nav-link">Home</a></li>
+        <li><a href="index.html#collection" class="nav-link active">Car Collection</a></li>
+        <li><a href="index.html#about" class="nav-link">About Us</a></li>
+        <li><a href="index.html#services" class="nav-link">Services</a></li>
+        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+        <li><a href="index.html#contact" class="nav-cta">Book Now</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== DETAIL CONTENT ROOT ========== -->
+  <div id="detailRoot">
+
+    <!-- ---- HERO ---- -->
+    <section class="detail-hero" id="detailHero">
+      <div class="detail-hero-bg">
+        <img id="detailHeroImg" src="" alt="Car Hero" />
+        <div class="detail-hero-overlay"></div>
+      </div>
+      <div class="detail-hero-content">
+        <nav class="detail-breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <a href="index.html#collection">Collection</a>
+          <span>/</span>
+          <span id="detailCarBrandBreadcrumb"></span>
+        </nav>
+        <div class="detail-title-row">
+          <div>
+            <span class="detail-car-brand" id="detailCarBrand"></span>
+            <h1 class="detail-car-name" id="detailCarName"></h1>
+          </div>
+          <div class="detail-price-block">
+            <span class="detail-price-label">Starting From</span>
+            <div class="detail-price" id="detailCarPrice"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---- QUICK SPECS BAR ---- -->
+    <div class="quick-specs" id="quickSpecs">
+      <div class="quick-specs-inner" id="quickSpecsInner">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+
+    <!-- ---- MAIN DETAIL CONTENT ---- -->
+    <main class="detail-content">
+      <div class="detail-layout">
+
+        <!-- LEFT COLUMN -->
+        <div class="detail-main">
+
+          <!-- Gallery -->
+          <section class="gallery-section">
+            <h2>Gallery</h2>
+            <div class="gallery-main">
+              <img id="galleryMainImg" src="" alt="Car Gallery" style="transition: opacity 0.3s ease;" />
+              <button class="gallery-nav-btn gallery-prev" id="galleryPrev" aria-label="Previous image">‹</button>
+              <button class="gallery-nav-btn gallery-next" id="galleryNext" aria-label="Next image">›</button>
+            </div>
+            <div class="gallery-thumbs" id="galleryThumbs">
+              <!-- Populated by JS -->
+            </div>
+          </section>
+
+          <!-- Description -->
+          <section style="margin-top:48px;" id="carDescription">
+            <!-- Populated by JS -->
+          </section>
+
+          <!-- Full Specs -->
+          <section class="specs-section">
+            <h2>Full Specifications</h2>
+            <div class="specs-tabs" role="tablist">
+              <button class="spec-tab active" data-tab="panelEngine" role="tab">Engine</button>
+              <button class="spec-tab" data-tab="panelPerformance" role="tab">Performance</button>
+              <button class="spec-tab" data-tab="panelFeatures" role="tab">Features</button>
+            </div>
+            <div id="panelEngine" class="spec-panel active">
+              <!-- Populated by JS -->
+            </div>
+            <div id="panelPerformance" class="spec-panel">
+              <!-- Populated by JS -->
+            </div>
+            <div id="panelFeatures" class="spec-panel">
+              <!-- Populated by JS -->
+            </div>
+          </section>
+
+        </div>
+
+        <!-- RIGHT SIDEBAR -->
+        <aside class="detail-sidebar">
+
+          <!-- Enquiry Card -->
+          <div class="enquiry-card">
+            <h3>Enquire Now</h3>
+            <p>Interested in the <strong id="sidebarCarName"></strong>? Leave your details and a specialist will contact you within 2 hours.</p>
+            <form class="enquiry-form" id="enquiryForm" novalidate>
+              <div class="form-group">
+                <label for="eqName">Full Name</label>
+                <input type="text" id="eqName" placeholder="Your Name" required />
+              </div>
+              <div class="form-group">
+                <label for="eqEmail">Email</label>
+                <input type="email" id="eqEmail" placeholder="you@email.com" required />
+              </div>
+              <div class="form-group">
+                <label for="eqPhone">Phone</label>
+                <input type="tel" id="eqPhone" placeholder="+1 (555) 000-0000" />
+              </div>
+              <div class="form-group">
+                <label for="eqMsg">Message</label>
+                <textarea id="eqMsg" rows="4" placeholder="I'm interested in a test drive..."></textarea>
+              </div>
+              <button type="submit" class="btn-primary full-width">Send Enquiry</button>
+              <div class="enquiry-success" id="enquirySuccess">
+                ✅ Message sent! We'll contact you shortly.
+              </div>
+            </form>
+          </div>
+
+          <!-- Starting Price -->
+          <div class="enquiry-card" style="background: linear-gradient(135deg, rgba(57,255,20,0.08), rgba(57,255,20,0.02)); border-color: rgba(57,255,20,0.25);">
+            <div style="text-align:center;">
+              <div style="font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:#B0B0B0;margin-bottom:8px;">Starting Price</div>
+              <div style="font-size:2.4rem;font-weight:800;color:#39FF14;line-height:1;" id="sidebarPrice"></div>
+              <p style="font-size:0.82rem;color:#B0B0B0;margin:12px 0 20px;">Excludes taxes, registration & delivery charges. Financing available.</p>
+              <a href="index.html#contact" class="btn-primary full-width" style="margin-bottom:12px;">Book a Test Drive</a>
+              <a href="tel:+97140000000" style="display:flex;align-items:center;justify-content:center;gap:8px;font-size:0.85rem;color:#B0B0B0;margin-top:4px;">
+                📞 Call: +971 4 000 0000
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="contact-card">
+            <h4>Showroom Details</h4>
+            <div class="contact-card-item">
+              <span>📍</span>
+              <span>1 Kaifksi Plaza, Dubai, UAE</span>
+            </div>
+            <div class="contact-card-item">
+              <span>🕐</span>
+              <span>Mon–Sat: 9AM – 8PM</span>
+            </div>
+            <div class="contact-card-item">
+              <span>📧</span>
+              <span>info@kaifksi.com</span>
+            </div>
+          </div>
+
+        </aside>
+      </div>
+
+      <!-- Related Cars -->
+      <section class="related-section">
+        <h2>You May Also Like</h2>
+        <div class="cars-grid" id="relatedGrid">
+          <!-- Populated by JS -->
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <span class="logo-icon">
+              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" width="22" height="22">
+                <path d="M2 22L8 10L16 18L22 8L30 22" stroke="#39FF14" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="logo-text">KAIFKSI</span>
+          </a>
+          <p>The pinnacle of luxury automotive retail. Curating the world's finest machines since 2009.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42A2.78 2.78 0 0020.83 4.7C19.25 4.26 12 4.26 12 4.26s-7.25 0-8.83.44A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.71 1.72c1.58.44 8.83.44 8.83.44s7.25 0 8.83-.44a2.78 2.78 0 001.71-1.72A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75,15.02 15.5,12 9.75,8.98 9.75,15.02" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter/X">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#collection">Car Collection</a></li>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Our Fleet</h4>
+          <ul>
+            <li><a href="car-detail.html?car=bmw-m4">BMW M4 Competition</a></li>
+            <li><a href="car-detail.html?car=mclaren-750s">McLaren 750S Spider</a></li>
+            <li><a href="car-detail.html?car=bugatti-chiron">Bugatti Chiron</a></li>
+            <li><a href="car-detail.html?car=dodge-hellcat">Dodge Hellcat</a></li>
+            <li><a href="car-detail.html?car=ford-mustang">Ford Mustang Dark Horse</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p>Get first access to new arrivals and exclusive events.</p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Your email" id="nlEmail" required />
+            <button type="submit" id="nlSubmit">→</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2024 Kaifksi Showroom. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/cars-data.js"></script>
+  <script src="js/detail.js"></script>
+</body>
+</html>
