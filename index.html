@@ -3,606 +3,535 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kaifksi Showroom — Precision. Power. Prestige.</title>
-  <meta name="description" content="Kaifksi Showroom — The ultimate luxury sports car destination. Discover iconic supercars including BMW M4, McLaren 750S, Bugatti Chiron, and more. Book your test drive today." />
-  <meta property="og:title" content="Kaifksi Showroom — Precision. Power. Prestige." />
-  <meta property="og:description" content="Experience the pinnacle of automotive excellence at Kaifksi Showroom." />
+  <meta name="description" content="Kaifksi Showroom — Experience the pinnacle of luxury automotive excellence. Browse our exclusive collection of premium sports cars." />
+  <meta name="keywords" content="luxury cars, sports cars, BMW M4, McLaren, Bugatti, Dodge Hellcat, Ford Mustang, car showroom" />
+  <title>Kaifksi Showroom | Precision. Power. Prestige.</title>
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ========== NAVBAR ========== -->
+  <!-- ==================== NAVBAR ==================== -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
-      <a href="index.html" class="logo" id="logo-link">
-        <span class="logo-icon">
-          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
-            <path d="M2 22L8 10L16 18L22 8L30 22" stroke="#39FF14" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M16 18L20 14" stroke="#39FF14" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </span>
+      <a href="#home" class="logo" id="nav-logo">
+        <span class="logo-icon">⚡</span>
         <span class="logo-text">KAIFKSI</span>
       </a>
       <ul class="nav-links" id="nav-links">
-        <li><a href="#home" class="nav-link active">Home</a></li>
-        <li><a href="#collection" class="nav-link">Car Collection</a></li>
-        <li><a href="#about" class="nav-link">About Us</a></li>
-        <li><a href="#services" class="nav-link">Services</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-        <li><a href="#contact" class="nav-cta">Book Now</a></li>
+        <li><a href="#home" class="nav-link active" data-page="home">Home</a></li>
+        <li><a href="#collection" class="nav-link" data-page="collection">Car Collection</a></li>
+        <li><a href="#about" class="nav-link" data-page="about">About Us</a></li>
+        <li><a href="#services" class="nav-link" data-page="services">Services</a></li>
+        <li><a href="#contact" class="nav-link" data-page="contact">Contact</a></li>
+        <li><a href="#contact" class="btn-book-nav" id="nav-book-btn">Book Now</a></li>
       </ul>
-      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
     </div>
   </nav>
 
-  <!-- ========== HERO SECTION ========== -->
-  <section class="hero" id="home">
-    <div class="hero-bg">
-      <img src="pagani-zonda-cinque-4000x2106-13123.jpg" alt="BMW M4 Neon Green Hero" class="hero-img" id="hero-bg-img" />
-      <div class="hero-overlay"></div>
-    </div>
-    <div class="hero-content" id="hero-content">
-      <span class="hero-badge reveal">— KAIFKSI SHOWROOM 2017 —</span>
-      <h1 class="hero-title reveal">
-        Precision.<br/>
-        <span class="accent">Power.</span><br/>
-        Prestige.
-      </h1>
-      <p class="hero-sub reveal">Where every machine is a masterpiece. Curated supercars for those who refuse to compromise.</p>
-      <div class="hero-btns reveal">
-        <a href="#collection" class="btn-primary">Explore Collection</a>
-        <a href="#contact" class="btn-outline">Book a Test Drive</a>
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main id="main-content">
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero" id="home">
+      <div class="hero-bg">
+        <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=1920&q=90&auto=format&fit=crop" 
+             alt="BMW M4 Neon Green Hero Car" class="hero-img" id="hero-bg-img" loading="eager" />
+        <div class="hero-overlay"></div>
       </div>
-      <div class="hero-scroll-hint reveal">
-        <span>Scroll to Discover</span>
+      <div class="hero-content">
+        <div class="hero-badge animate-fade-up">
+          <span class="badge-dot"></span>
+          <span>Premium Automotive Experience</span>
+        </div>
+        <h1 class="hero-title animate-fade-up delay-1">
+          Precision.<br />
+          <span class="hero-title-accent">Power.</span><br />
+          Prestige.
+        </h1>
+        <p class="hero-subtitle animate-fade-up delay-2">
+          Welcome to Kaifksi Showroom — where engineering masterpieces meet<br class="desktop-break" />
+          unparalleled luxury. Discover your dream machine.
+        </p>
+        <div class="hero-cta animate-fade-up delay-3">
+          <a href="#collection" class="btn btn-primary" id="hero-explore-btn">
+            <span>Explore Collection</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="#contact" class="btn btn-outline" id="hero-testdrive-btn">
+            <span>Book a Test Drive</span>
+          </a>
+        </div>
+        <div class="hero-stats animate-fade-up delay-4">
+          <div class="hero-stat">
+            <span class="hero-stat-num">500+</span>
+            <span class="hero-stat-label">Cars Sold</span>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <span class="hero-stat-num">98%</span>
+            <span class="hero-stat-label">Satisfaction</span>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <span class="hero-stat-num">15+</span>
+            <span class="hero-stat-label">Years Experience</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll-indicator">
         <div class="scroll-line"></div>
+        <span>Scroll Down</span>
       </div>
-    </div>
-    <div class="hero-stats">
-      <div class="hstat">
-        <strong>500+</strong><span>Cars Sold</span>
-      </div>
-      <div class="hstat">
-        <strong>98%</strong><span>Satisfaction</span>
-      </div>
-      <div class="hstat">
-        <strong>15+</strong><span>Years</span>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ========== MARQUEE TICKER ========== -->
-  <div class="ticker-wrap">
-    <div class="ticker">
-      <span>BMW M4 &nbsp;⚡&nbsp;</span>
-      <span>McLaren 750S &nbsp;⚡&nbsp;</span>
-      <span>Bugatti Chiron &nbsp;⚡&nbsp;</span>
-      <span>Dodge Hellcat &nbsp;⚡&nbsp;</span>
-      <span>Ford Mustang Dark Horse &nbsp;⚡&nbsp;</span>
-      <span>Lamborghini Huracán &nbsp;⚡&nbsp;</span>
-      <span>Porsche 911 GT3 &nbsp;⚡&nbsp;</span>
-      <span>Ferrari SF90 &nbsp;⚡&nbsp;</span>
-      <span>BMW M4 &nbsp;⚡&nbsp;</span>
-      <span>McLaren 750S &nbsp;⚡&nbsp;</span>
-      <span>Bugatti Chiron &nbsp;⚡&nbsp;</span>
-      <span>Dodge Hellcat &nbsp;⚡&nbsp;</span>
-      <span>Ford Mustang Dark Horse &nbsp;⚡&nbsp;</span>
-      <span>Lamborghini Huracán &nbsp;⚡&nbsp;</span>
-      <span>Porsche 911 GT3 &nbsp;⚡&nbsp;</span>
-      <span>Ferrari SF90 &nbsp;⚡&nbsp;</span>
-    </div>
-  </div>
-
-  <!-- ========== FEATURED CARS ========== -->
-  <section class="section" id="collection">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Our Fleet</span>
-        <h2 class="section-title">Featured <span class="accent">Collection</span></h2>
-        <p class="section-sub">Hand-selected machines representing the apex of automotive engineering.</p>
-      </div>
-      <div class="cars-grid">
-
-        <!-- BMW M4 -->
-        <a href="car-detail.html?car=bmw-m4" class="car-card reveal" id="card-bmw">
-          <div class="car-img-wrap">
-            <img src="bmw-m3-final-3840x2160-16048.jpg" alt="BMW M4 Neon Green" loading="lazy" />
-            <div class="car-badge">FEATURED</div>
-            <div class="car-hover-overlay">
-              <span class="view-btn">View Details →</span>
-            </div>
-          </div>
-          <div class="car-info">
-            <div class="car-meta">
-              <span class="car-brand">BMW</span>
-              <span class="car-year">2017</span>
-            </div>
-            <h3 class="car-name">M4 Competition</h3>
-            <div class="car-specs-row">
-              <span>503 HP</span>
-              <span>3.9s 0-60</span>
-              <span>180 mph</span>
-            </div>
-            <div class="car-footer">
-              <span class="car-price">From <strong>$84,900</strong></span>
-              <span class="car-cta">Enquire →</span>
-            </div>
-          </div>
-        </a>
-
-        <!-- Toyota Supra -->
-        <a href="car-detail.html?car=mclaren-750s" class="car-card reveal" id="card-mclaren">
-          <div class="car-img-wrap">
-            <img src="wp3433639-supra-logo-wallpapers.jpg" alt="Toyota Supra" loading="lazy" />
-            <div class="car-hover-overlay">
-              <span class="view-btn">View Details →</span>
-            </div>
-          </div>
-          <div class="car-info">
-            <div class="car-meta">
-              <span class="car-brand">Toyota Supra</span>
-              <span class="car-year">2017</span>
-            </div>
-            <h3 class="car-name">Toyota Supra MK4</h3>
-            <div class="car-specs-row">
-              <span>740 HP</span>
-              <span>2.8s 0-60</span>
-              <span>206 mph</span>
-            </div>
-            <div class="car-footer">
-              <span class="car-price">From <strong>$324,500</strong></span>
-              <span class="car-cta">Enquire →</span>
-            </div>
-          </div>
-        </a>
-
-        <!-- Bugatti Chiron -->
-        <a href="car-detail.html?car=bugatti-chiron" class="car-card reveal" id="card-bugatti">
-          <div class="car-img-wrap">
-            <img src="wp12308136-black-bugatti-chiron-pur-sport-wallpapers.jpg" alt="Bugatti Chiron" loading="lazy" />
-            <div class="car-badge" style="background:#1a3fff;">ULTRA RARE</div>
-            <div class="car-hover-overlay">
-              <span class="view-btn">View Details →</span>
-            </div>
-          </div>
-          <div class="car-info">
-            <div class="car-meta">
-              <span class="car-brand">Bugatti</span>
-              <span class="car-year">2017</span>
-            </div>
-            <h3 class="car-name">Chiron Super Sport</h3>
-            <div class="car-specs-row">
-              <span>1,578 HP</span>
-              <span>2.3s 0-60</span>
-              <span>273 mph</span>
-            </div>
-            <div class="car-footer">
-              <span class="car-price">From <strong>$3,800,000</strong></span>
-              <span class="car-cta">Enquire →</span>
-            </div>
-          </div>
-        </a>
-
-        <!-- Dodge Hellcat -->
-        <a href="car-detail.html?car=dodge-hellcat" class="car-card reveal" id="card-dodge">
-          <div class="car-img-wrap">
-            <img src="wp12346603-dodge-challenger-4k-wallpapers.jpg" alt="Dodge Hellcat" loading="lazy" />
-            <div class="car-hover-overlay">
-              <span class="view-btn">View Details →</span>
-            </div>
-          </div>
-          <div class="car-info">
-            <div class="car-meta">
-              <span class="car-brand">Dodge</span>
-              <span class="car-year">2023</span>
-            </div>
-            <h3 class="car-name">Challenger SRT Hellcat</h3>
-            <div class="car-specs-row">
-              <span>717 HP</span>
-              <span>3.6s 0-60</span>
-              <span>199 mph</span>
-            </div>
-            <div class="car-footer">
-              <span class="car-price">From <strong>$62,400</strong></span>
-              <span class="car-cta">Enquire →</span>
-            </div>
-          </div>
-        </a>
-
-        <!-- Ford Mustang -->
-        <a href="car-detail.html?car=ford-mustang" class="car-card reveal" id="card-mustang">
-          <div class="car-img-wrap">
-            <img src="wp2538822-need-for-speed-movie-wallpapers.jpg" alt="Ford Mustang Dark Horse" loading="lazy" />
-            <div class="car-hover-overlay">
-              <span class="view-btn">View Details →</span>
-            </div>
-          </div>
-          <div class="car-info">
-            <div class="car-meta">
-              <span class="car-brand">Ford</span>
-              <span class="car-year">2017</span>
-            </div>
-            <h3 class="car-name">Mustang Dark Horse</h3>
-            <div class="car-specs-row">
-              <span>500 HP</span>
-              <span>4.1s 0-60</span>
-              <span>180 mph</span>
-            </div>
-            <div class="car-footer">
-              <span class="car-price">From <strong>$57,970</strong></span>
-              <span class="car-cta">Enquire →</span>
-            </div>
-          </div>
-        </a>
-
-        <!-- Porsche 911 Black -->
-        <a href="car-detail.html?car=lamborghini-huracan" class="car-card reveal" id="card-lambo">
-          <div class="car-img-wrap">
-            <img src="wp16303279-porsche-911-black-4k-wallpapers.webp" alt="Porsche 911" loading="lazy" />
-            <div class="car-badge" style="background:#ff6b00;">HOT</div>
-            <div class="car-hover-overlay">
-              <span class="view-btn">View Details →</span>
-            </div>
-          </div>
-          <div class="car-info">
-            <div class="car-meta">
-              <span class="car-brand">Porsche</span>
-              <span class="car-year">2017</span>
-            </div>
-            <h3 class="car-name">Porsche 911 Black</h3>
-            <div class="car-specs-row">
-              <span>631 HP</span>
-              <span>3.2s 0-60</span>
-              <span>202 mph</span>
-            </div>
-            <div class="car-footer">
-              <span class="car-price">From <strong>$267,000</strong></span>
-              <span class="car-cta">Enquire →</span>
-            </div>
-          </div>
-        </a>
-
-      </div>
-      <div class="section-cta reveal">
-        <a href="#contact" class="btn-primary">View Full Inventory</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== STATS SECTION ========== -->
-  <section class="stats-section" id="stats">
-    <div class="stats-bg"></div>
-    <div class="container">
-      <div class="stats-grid">
-        <div class="stat-item reveal">
-          <div class="stat-number" data-target="500">0</div>
-          <div class="stat-plus">+</div>
-          <div class="stat-label">Cars Sold</div>
-        </div>
-        <div class="stat-item reveal">
-          <div class="stat-number" data-target="98">0</div>
-          <div class="stat-plus">%</div>
-          <div class="stat-label">Client Satisfaction</div>
-        </div>
-        <div class="stat-item reveal">
-          <div class="stat-number" data-target="15">0</div>
-          <div class="stat-plus">+</div>
-          <div class="stat-label">Years Experience</div>
-        </div>
-        <div class="stat-item reveal">
-          <div class="stat-number" data-target="100">0</div>
-          <div class="stat-plus">%</div>
-          <div class="stat-label">Verified Vehicles</div>
+    <!-- ==================== MARQUEE ==================== -->
+    <div class="marquee-section">
+      <div class="marquee-track">
+        <div class="marquee-content">
+          <span>BMW M4</span><span class="marquee-dot">•</span>
+          <span>McLaren 750S</span><span class="marquee-dot">•</span>
+          <span>Bugatti Chiron</span><span class="marquee-dot">•</span>
+          <span>Dodge Hellcat</span><span class="marquee-dot">•</span>
+          <span>Ford Mustang</span><span class="marquee-dot">•</span>
+          <span>Lamborghini</span><span class="marquee-dot">•</span>
+          <span>Ferrari</span><span class="marquee-dot">•</span>
+          <span>Porsche 911</span><span class="marquee-dot">•</span>
+          <!-- Duplicate for seamless loop -->
+          <span>BMW M4</span><span class="marquee-dot">•</span>
+          <span>McLaren 750S</span><span class="marquee-dot">•</span>
+          <span>Bugatti Chiron</span><span class="marquee-dot">•</span>
+          <span>Dodge Hellcat</span><span class="marquee-dot">•</span>
+          <span>Ford Mustang</span><span class="marquee-dot">•</span>
+          <span>Lamborghini</span><span class="marquee-dot">•</span>
+          <span>Ferrari</span><span class="marquee-dot">•</span>
+          <span>Porsche 911</span><span class="marquee-dot">•</span>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- ========== ABOUT SECTION ========== -->
-  <section class="section about-section" id="about">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-text reveal">
-          <span class="section-tag">Our Legacy</span>
-          <h2 class="section-title">Born from a <span class="accent">Passion</span> for Perfection</h2>
-          <p>Since 2009, Kaifksi Showroom has been the definitive destination for automotive connoisseurs. We don't just sell cars — we curate experiences, matching visionary clients with machines that define an era.</p>
-          <p>Every vehicle in our collection is personally inspected, authenticated, and presented to the highest standard. From iconic supercars to exclusive hypercars, we represent the best the world has to offer.</p>
-          <div class="about-feats">
-            <div class="feat-item">
-              <span class="feat-icon">✦</span>
-              <div>
-                <strong>Concierge Service</strong>
-                <p>White-glove, personalized buying experience from first inquiry to delivery.</p>
+    <!-- ==================== FEATURED CARS SECTION ==================== -->
+    <section class="section cars-section" id="collection">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Our Fleet</div>
+          <h2 class="section-title">Featured <span class="accent">Collection</span></h2>
+          <p class="section-desc">Hand-picked pinnacles of automotive engineering. Each vehicle a masterpiece of form and function.</p>
+        </div>
+
+        <div class="cars-filter">
+          <button class="filter-btn active" data-filter="all" id="filter-all">All</button>
+          <button class="filter-btn" data-filter="supercar" id="filter-supercar">Supercar</button>
+          <button class="filter-btn" data-filter="muscle" id="filter-muscle">Muscle</button>
+          <button class="filter-btn" data-filter="hypercar" id="filter-hypercar">Hypercar</button>
+        </div>
+
+        <div class="cars-grid" id="cars-grid">
+          <!-- Car cards injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== STATS SECTION ==================== -->
+    <section class="stats-section" id="stats">
+      <div class="stats-bg"></div>
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card" data-aos="fade-up">
+            <div class="stat-icon">🏎️</div>
+            <div class="stat-number" data-target="500" data-suffix="+">0</div>
+            <div class="stat-label">Cars Sold</div>
+            <div class="stat-desc">Premium vehicles delivered worldwide</div>
+          </div>
+          <div class="stat-card" data-aos="fade-up" data-delay="100">
+            <div class="stat-icon">⭐</div>
+            <div class="stat-number" data-target="98" data-suffix="%">0</div>
+            <div class="stat-label">Client Satisfaction</div>
+            <div class="stat-desc">Average satisfaction rating across all sales</div>
+          </div>
+          <div class="stat-card" data-aos="fade-up" data-delay="200">
+            <div class="stat-icon">🏆</div>
+            <div class="stat-number" data-target="15" data-suffix="+">0</div>
+            <div class="stat-label">Years Experience</div>
+            <div class="stat-desc">Decades of automotive excellence</div>
+          </div>
+          <div class="stat-card" data-aos="fade-up" data-delay="300">
+            <div class="stat-icon">✅</div>
+            <div class="stat-number" data-target="100" data-suffix="%">0</div>
+            <div class="stat-label">Verified Vehicles</div>
+            <div class="stat-desc">Fully inspected and certified</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image-wrap" data-aos="fade-right">
+            <div class="about-image-container">
+              <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=85&auto=format&fit=crop" 
+                   alt="Kaifksi Showroom luxury interior" class="about-img" loading="lazy" />
+              <div class="about-img-badge">
+                <span class="badge-year">EST</span>
+                <span class="badge-num">2009</span>
               </div>
             </div>
-            <div class="feat-item">
-              <span class="feat-icon">✦</span>
-              <div>
-                <strong>Global Network</strong>
-                <p>Access to exclusive inventory from partner dealers across 40+ countries.</p>
-              </div>
-            </div>
-            <div class="feat-item">
-              <span class="feat-icon">✦</span>
-              <div>
-                <strong>Certified Excellence</strong>
-                <p>Every car undergoes a 150-point inspection and comes with full documentation.</p>
+            <div class="about-accent-box">
+              <div class="accent-stat">
+                <span class="accent-num">500+</span>
+                <span class="accent-label">Premium Cars</span>
               </div>
             </div>
           </div>
-          <a href="#contact" class="btn-primary" style="margin-top:2rem;display:inline-block;">Discover Our Story</a>
-        </div>
-        <div class="about-img-wrap reveal">
-          <img src="wp9442902-car-showroom-wallpapers.jpg" alt="Luxury Showroom Interior" />
-          <div class="about-img-badge">
-            <strong>15+</strong>
-            <span>Years of Excellence</span>
+          <div class="about-content" data-aos="fade-left">
+            <div class="section-tag">Our Story</div>
+            <h2 class="section-title">The Legacy of <span class="accent">Excellence</span></h2>
+            <p class="about-text">
+              Founded in 2009, Kaifksi Showroom has been the premier destination for automotive connoisseurs seeking the extraordinary. 
+              We don't just sell cars — we curate experiences, forge legacies, and deliver dreams on four wheels.
+            </p>
+            <p class="about-text">
+              From the raw power of the Dodge Hellcat to the ethereal precision of the Bugatti Chiron, every vehicle in our 
+              collection is hand-selected, meticulously verified, and delivered with the concierge service you deserve.
+            </p>
+            <div class="about-features">
+              <div class="about-feature">
+                <div class="feature-icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div>
+                  <strong>Full Vehicle History Reports</strong>
+                  <p>Every car comes with a complete, verified ownership and service history.</p>
+                </div>
+              </div>
+              <div class="about-feature">
+                <div class="feature-icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div>
+                  <strong>White Glove Delivery</strong>
+                  <p>Nationwide delivery with premium handling and full insurance coverage.</p>
+                </div>
+              </div>
+              <div class="about-feature">
+                <div class="feature-icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div>
+                  <strong>Bespoke Financing Solutions</strong>
+                  <p>Tailored financial plans with competitive rates to match your lifestyle.</p>
+                </div>
+              </div>
+            </div>
+            <a href="#contact" class="btn btn-primary" id="about-cta-btn">
+              <span>Discover More</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ========== SERVICES SECTION ========== -->
-  <section class="section services-section" id="services">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">What We Offer</span>
-        <h2 class="section-title">Premium <span class="accent">Services</span></h2>
-      </div>
-      <div class="services-grid">
-        <div class="service-card reveal">
-          <div class="service-icon">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="24" cy="24" r="20" stroke="#39FF14" stroke-width="2"/>
-              <path d="M16 28L22 22L26 26L32 20" stroke="#39FF14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <h3>Vehicle Acquisition</h3>
-          <p>We source any supercar globally on your behalf — from factory orders to rare limited editions.</p>
+    <!-- ==================== SERVICES SECTION ==================== -->
+    <section class="section services-section" id="services">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">What We Offer</div>
+          <h2 class="section-title">Premium <span class="accent">Services</span></h2>
+          <p class="section-desc">Beyond the purchase — we offer a lifetime of automotive excellence.</p>
         </div>
-        <div class="service-card reveal">
-          <div class="service-icon">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="8" y="14" width="32" height="22" rx="3" stroke="#39FF14" stroke-width="2"/>
-              <path d="M16 36v4M32 36v4M8 22h32" stroke="#39FF14" stroke-width="2" stroke-linecap="round"/>
-            </svg>
+        <div class="services-grid">
+          <div class="service-card" data-aos="fade-up">
+            <div class="service-icon">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 7H5C3.9 7 3 7.9 3 9v9c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2z"/><polyline points="16 3 12 7 8 3"/></svg>
+            </div>
+            <h3>Vehicle Sourcing</h3>
+            <p>Can't find your dream car? Our global network lets us source any vehicle, anywhere in the world.</p>
+            <a href="#contact" class="service-link">Learn More →</a>
           </div>
-          <h3>Test Drive Experience</h3>
-          <p>Private track days and road test sessions arranged at exclusive venues — feel the power before you decide.</p>
-        </div>
-        <div class="service-card reveal">
-          <div class="service-icon">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M24 8l4 8h9l-7 5.5 2.5 8.5L24 25l-8.5 5 2.5-8.5L11 16h9z" stroke="#39FF14" stroke-width="2" stroke-linejoin="round"/>
-            </svg>
+          <div class="service-card" data-aos="fade-up" data-delay="100">
+            <div class="service-icon">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+            <h3>Test Drive Experience</h3>
+            <p>Book a private test drive at our track facility — feel the power before you commit.</p>
+            <a href="#contact" class="service-link">Learn More →</a>
           </div>
-          <h3>Bespoke Customization</h3>
-          <p>Wraps, interiors, performance tuning — transform your car into a singular expression of your identity.</p>
-        </div>
-        <div class="service-card reveal">
-          <div class="service-icon">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M24 4C13 4 4 13 4 24s9 20 20 20 20-9 20-20S35 4 24 4z" stroke="#39FF14" stroke-width="2"/>
-              <path d="M24 14v12l7 4" stroke="#39FF14" stroke-width="2" stroke-linecap="round"/>
-            </svg>
+          <div class="service-card" data-aos="fade-up" data-delay="200">
+            <div class="service-icon">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3>Bespoke Financing</h3>
+            <p>Flexible payment plans, trade-ins, and premium financing solutions tailored to you.</p>
+            <a href="#contact" class="service-link">Learn More →</a>
           </div>
-          <h3>Financing & Leasing</h3>
-          <p>Flexible, competitive financing plans tailored to your needs with same-day approvals available.</p>
-        </div>
-        <div class="service-card reveal">
-          <div class="service-icon">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 20h24M12 28h16M8 10h32a2 2 0 012 2v24a2 2 0 01-2 2H8a2 2 0 01-2-2V12a2 2 0 012-2z" stroke="#39FF14" stroke-width="2" stroke-linecap="round"/>
-            </svg>
+          <div class="service-card" data-aos="fade-up" data-delay="300">
+            <div class="service-icon">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Vehicle Inspection</h3>
+            <p>150-point certified inspection by factory-trained technicians on every vehicle.</p>
+            <a href="#contact" class="service-link">Learn More →</a>
           </div>
-          <h3>Trade-In Program</h3>
-          <p>Receive a fair, transparent valuation for your current vehicle and seamlessly upgrade to your dream car.</p>
-        </div>
-        <div class="service-card reveal">
-          <div class="service-icon">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M24 6l2.5 7.5H34l-6.5 4.5 2.5 7.5L24 21l-6 4.5 2.5-7.5L14 13.5h7.5z" stroke="#39FF14" stroke-width="2" stroke-linejoin="round"/>
-              <path d="M12 38h24" stroke="#39FF14" stroke-width="2" stroke-linecap="round"/>
-            </svg>
+          <div class="service-card" data-aos="fade-up" data-delay="400">
+            <div class="service-icon">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <h3>White Glove Delivery</h3>
+            <p>Nationwide concierge delivery with full insurance and premium presentation.</p>
+            <a href="#contact" class="service-link">Learn More →</a>
           </div>
-          <h3>VIP Membership</h3>
-          <p>Join our exclusive club for priority access to new arrivals, private events, and member-only pricing.</p>
+          <div class="service-card" data-aos="fade-up" data-delay="500">
+            <div class="service-icon">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <h3>After-Sale Support</h3>
+            <p>Lifetime concierge support, maintenance scheduling, and a dedicated account manager.</p>
+            <a href="#contact" class="service-link">Learn More →</a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ========== TESTIMONIALS ========== -->
-  <section class="section testimonials-section" id="testimonials">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Client Stories</span>
-        <h2 class="section-title">What Our <span class="accent">Clients</span> Say</h2>
-      </div>
-      <div class="testimonials-slider reveal">
-        <div class="testimonials-track" id="testimonialsTrack">
-
-          <div class="testimonial-card">
-            <div class="stars">★★★★★</div>
-            <p>"The team at Kaifksi made the process of acquiring my Toyota Supra absolutely seamless. Their knowledge, professionalism, and attention to detail is unmatched. Worth every penny."</p>
-            <div class="testimonial-author">
-              <div class="author-avatar">JR</div>
-              <div>
-                <strong>James R.</strong>
-                <span>Toyota Supra Owner</span>
+    <!-- ==================== TESTIMONIALS SECTION ==================== -->
+    <section class="section testimonials-section" id="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Client Stories</div>
+          <h2 class="section-title">What Our <span class="accent">Clients</span> Say</h2>
+        </div>
+        <div class="testimonial-carousel-wrap">
+          <div class="testimonial-carousel" id="testimonial-carousel">
+            <div class="testimonial-card active">
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">"Kaifksi Showroom delivered my BMW M4 in neon green — exactly as I dreamed. The entire experience from enquiry to delivery was flawless. Truly world-class service."</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">JR</div>
+                <div>
+                  <strong>James Richardson</strong>
+                  <span>BMW M4 Owner</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">"I've purchased vehicles from dealers across three continents. Nothing compares to the Kaifksi experience. My McLaren 750S was delivered in perfect condition with a full concierge handover."</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">SC</div>
+                <div>
+                  <strong>Sophia Chen</strong>
+                  <span>McLaren 750S Owner</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">"The team at Kaifksi found my Bugatti Chiron in navy blue when no one else could. Their global sourcing network is unmatched. I'm a customer for life."</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">AM</div>
+                <div>
+                  <strong>Ahmed Al-Mansouri</strong>
+                  <span>Bugatti Chiron Owner</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-text">"Bought my Dodge Hellcat through Kaifksi and the financing terms were incredible. Transparent, fast, and professional. The 150-point inspection gave me complete peace of mind."</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">MK</div>
+                <div>
+                  <strong>Marcus Kelly</strong>
+                  <span>Dodge Hellcat Owner</span>
+                </div>
               </div>
             </div>
           </div>
-
-          <div class="testimonial-card">
-            <div class="stars">★★★★★</div>
-            <p>"I've purchased three cars from Kaifksi over the years. The VIP membership is genuinely elite — I got early access to the Chiron Super Sport before it was publicly listed. Incredible service."</p>
-            <div class="testimonial-author">
-              <div class="author-avatar">SA</div>
-              <div>
-                <strong>Sofia A.</strong>
-                <span>VIP Member — Bugatti Owner</span>
-              </div>
+          <div class="testimonial-controls">
+            <button class="t-btn t-prev" id="t-prev" aria-label="Previous testimonial">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <div class="t-dots" id="t-dots">
+              <span class="t-dot active" data-index="0"></span>
+              <span class="t-dot" data-index="1"></span>
+              <span class="t-dot" data-index="2"></span>
+              <span class="t-dot" data-index="3"></span>
             </div>
+            <button class="t-btn t-next" id="t-next" aria-label="Next testimonial">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
           </div>
-
-          <div class="testimonial-card">
-            <div class="stars">★★★★★</div>
-            <p>"The test drive experience at their private track was mind-blowing. The BMW M4 in neon green wrap drove like a dream. Bought it on the spot — no regrets whatsoever!"</p>
-            <div class="testimonial-author">
-              <div class="author-avatar">DK</div>
-              <div>
-                <strong>David K.</strong>
-                <span>BMW M4 Competition Owner</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="stars">★★★★★</div>
-            <p>"Truly world-class. From the showroom experience to delivery — even the custom wrap they organized on my Lamborghini — everything exceeded my high expectations."</p>
-            <div class="testimonial-author">
-              <div class="author-avatar">MN</div>
-              <div>
-                <strong>Marcus N.</strong>
-                <span>Lamborghini Huracán Owner</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <div class="slider-controls">
-          <button class="slider-btn" id="prevBtn" aria-label="Previous">‹</button>
-          <div class="slider-dots" id="sliderDots"></div>
-          <button class="slider-btn" id="nextBtn" aria-label="Next">›</button>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ========== CONTACT SECTION ========== -->
-  <section class="section contact-section" id="contact">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Get In Touch</span>
-        <h2 class="section-title">Visit the <span class="accent">Showroom</span></h2>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-info reveal">
-          <div class="info-block">
-            <h4>📍 Address</h4>
-            <p>1 Kaifksi Plaza, Luxury Mile<br/>Dubai, UAE 00000</p>
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Get In Touch</div>
+          <h2 class="section-title">Visit the <span class="accent">Showroom</span></h2>
+          <p class="section-desc">Ready to experience automotive perfection? We're here to make it happen.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info" data-aos="fade-right">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <strong>Showroom Address</strong>
+                <p>42 Prestige Boulevard, Automotive Quarter<br />Dubai, UAE 00000</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.32 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.29 6.29l1.06-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <strong>Phone</strong>
+                <p>+971 4 000 0000</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <strong>Email</strong>
+                <p>hello@kaifksi.com</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <strong>Opening Hours</strong>
+                <p>Mon – Sat: 9:00 AM – 8:00 PM<br />Sunday: 11:00 AM – 6:00 PM</p>
+              </div>
+            </div>
+            <div class="map-embed">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.178473853978!2d55.26741631500984!3d25.197197983899487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43496ad9c645%3A0xbde66e5084295162!2sBurj%20Khalifa!5e0!3m2!1sen!2sae!4v1620000000000"
+                width="100%" height="200" style="border:0; border-radius:12px; filter: grayscale(100%) invert(92%) hue-rotate(180deg);" 
+                allowfullscreen="" loading="lazy" title="Kaifksi Showroom Location">
+              </iframe>
+            </div>
           </div>
-          <div class="info-block">
-            <h4>📞 Phone</h4>
-            <p>+971 4 000 0000</p>
-          </div>
-          <div class="info-block">
-            <h4>📧 Email</h4>
-            <p>info@kaifksi.com</p>
-          </div>
-          <div class="info-block">
-            <h4>🕐 Hours</h4>
-            <p>Mon–Sat: 9AM – 8PM<br/>Sunday: By Appointment</p>
-          </div>
-          <div class="map-wrap">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.9!2d55.2708!3d25.2048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDEyJzE3LjMiTiA1NcKwMTYnMTQuOSJF!5e0!3m2!1sen!2sae!4v1700000000000!5m2!1sen!2sae"
-              width="100%"
-              height="220"
-              style="border:0;border-radius:12px;filter:grayscale(80%) invert(90%) hue-rotate(180deg);"
-              allowfullscreen=""
-              loading="lazy"
-              title="Kaifksi Showroom Location"
-            ></iframe>
+
+          <div class="contact-form-wrap" data-aos="fade-left">
+            <form class="contact-form" id="contact-form" novalidate>
+              <h3 class="form-title">Send Us a Message</h3>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-name">Full Name *</label>
+                  <input type="text" id="contact-name" name="name" placeholder="John Richardson" required />
+                  <span class="field-error" id="name-error"></span>
+                </div>
+                <div class="form-group">
+                  <label for="contact-phone">Phone Number *</label>
+                  <input type="tel" id="contact-phone" name="phone" placeholder="+971 50 000 0000" required />
+                  <span class="field-error" id="phone-error"></span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Email Address *</label>
+                <input type="email" id="contact-email" name="email" placeholder="john@example.com" required />
+                <span class="field-error" id="email-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="contact-interest">Interested In</label>
+                <select id="contact-interest" name="interest">
+                  <option value="">Select a vehicle or service…</option>
+                  <option value="bmw-m4">BMW M4 — Neon Green</option>
+                  <option value="mclaren-750s">McLaren 750S — Orange</option>
+                  <option value="bugatti-chiron">Bugatti Chiron — Navy Blue</option>
+                  <option value="dodge-hellcat">Dodge Challenger SRT Hellcat</option>
+                  <option value="ford-mustang">Ford Mustang Dark Horse</option>
+                  <option value="test-drive">Book a Test Drive</option>
+                  <option value="financing">Financing Enquiry</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="contact-message">Message *</label>
+                <textarea id="contact-message" name="message" rows="5" placeholder="Tell us about your requirements…" required></textarea>
+                <span class="field-error" id="message-error"></span>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full" id="form-submit-btn">
+                <span>Send Message</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+              <div class="form-success" id="form-success" style="display:none">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Message sent! We'll be in touch within 24 hours.</span>
+              </div>
+            </form>
           </div>
         </div>
-        <form class="contact-form reveal" id="contactForm" novalidate>
-          <h3>Send an Enquiry</h3>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="fname">Full Name *</label>
-              <input type="text" id="fname" name="name" placeholder="Your Name" required />
-              <span class="field-error" id="nameError"></span>
-            </div>
-            <div class="form-group">
-              <label for="femail">Email *</label>
-              <input type="email" id="femail" name="email" placeholder="you@email.com" required />
-              <span class="field-error" id="emailError"></span>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="fphone">Phone</label>
-            <input type="tel" id="fphone" name="phone" placeholder="+1 (555) 000-0000" />
-          </div>
-          <div class="form-group">
-            <label for="fcar">Car of Interest</label>
-            <select id="fcar" name="car">
-              <option value="">Select a vehicle...</option>
-              <option>BMW M4 Competition</option>
-              <option>toyota Supra</option>
-              <option>Bugatti Chiron Super Sport</option>
-              <option>Dodge Challenger SRT Hellcat</option>
-              <option>Ford Mustang Dark Horse</option>
-              <option>Porsche 911 Black</option>
-              <option>Other / Not Listed</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="fmsg">Message *</label>
-            <textarea id="fmsg" name="message" rows="5" placeholder="Tell us about your dream car..." required></textarea>
-            <span class="field-error" id="msgError"></span>
-          </div>
-          <button type="submit" class="btn-primary full-width" id="submitBtn">
-            <span class="btn-text">Send Enquiry</span>
-            <span class="btn-loader" style="display:none;">Sending…</span>
-          </button>
-          <div class="form-success" id="formSuccess" style="display:none;">
-            ✅ Thank you! We'll be in touch within 24 hours.
-          </div>
-        </form>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ========== FOOTER ========== -->
+    <!-- ==================== NEWSLETTER ==================== -->
+    <section class="newsletter-section">
+      <div class="container">
+        <div class="newsletter-card">
+          <div class="newsletter-content">
+            <h3>Stay in the <span class="accent">Fast Lane</span></h3>
+            <p>Get exclusive first access to new arrivals, special events, and limited offers.</p>
+          </div>
+          <form class="newsletter-form" id="newsletter-form">
+            <input type="email" id="newsletter-email" placeholder="Enter your email address…" required />
+            <button type="submit" class="btn btn-primary" id="newsletter-submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="logo">
-            <span class="logo-icon">
-              <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" width="22" height="22">
-                <path d="M2 22L8 10L16 18L22 8L30 22" stroke="#39FF14" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </span>
+          <a href="#home" class="logo footer-logo">
+            <span class="logo-icon">⚡</span>
             <span class="logo-text">KAIFKSI</span>
           </a>
-          <p>The pinnacle of luxury automotive retail. Curating the world's finest machines since 2009.</p>
-          <div class="social-links">
-            <a href="#" class="social-link" aria-label="Instagram">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          <p class="footer-tagline">Where performance meets prestige. The pinnacle of luxury automotive excellence since 2009.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="Instagram" id="social-instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
             </a>
-            <a href="#" class="social-link" aria-label="YouTube">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42A2.78 2.78 0 0020.83 4.7C19.25 4.26 12 4.26 12 4.26s-7.25 0-8.83.44A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.71 1.72c1.58.44 8.83.44 8.83.44s7.25 0 8.83-.44a2.78 2.78 0 001.71-1.72A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75,15.02 15.5,12 9.75,8.98 9.75,15.02" fill="currentColor" stroke="none"/></svg>
+            <a href="#" class="social-link" aria-label="Twitter/X" id="social-twitter">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
             </a>
-            <a href="#" class="social-link" aria-label="Twitter/X">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            <a href="#" class="social-link" aria-label="YouTube" id="social-youtube">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.41 19.1C5.12 19.56 12 19.56 12 19.56s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.42z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
             </a>
-            <a href="#" class="social-link" aria-label="Facebook">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            <a href="#" class="social-link" aria-label="LinkedIn" id="social-linkedin">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
             </a>
           </div>
         </div>
         <div class="footer-col">
-          <h4>Quick Links</h4>
-          <ul>
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#collection">Car Collection</a></li>
             <li><a href="#about">About Us</a></li>
@@ -611,27 +540,28 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Our Fleet</h4>
-          <ul>
-            <li><a href="car-detail.html?car=bmw-m4">BMW M4 Competition</a></li>
-            <li><a href="car-detail.html?car=mclaren-750s">McLaren 750S Spider</a></li>
-            <li><a href="car-detail.html?car=bugatti-chiron">Bugatti Chiron</a></li>
-            <li><a href="car-detail.html?car=dodge-hellcat">Dodge Hellcat</a></li>
-            <li><a href="car-detail.html?car=ford-mustang">Ford Mustang Dark Horse</a></li>
+          <h4 class="footer-col-title">Our Fleet</h4>
+          <ul class="footer-links">
+            <li><a href="#collection" data-car="bmw-m4">BMW M4</a></li>
+            <li><a href="#collection" data-car="mclaren-750s">McLaren 750S</a></li>
+            <li><a href="#collection" data-car="bugatti-chiron">Bugatti Chiron</a></li>
+            <li><a href="#collection" data-car="dodge-hellcat">Dodge Hellcat</a></li>
+            <li><a href="#collection" data-car="ford-mustang">Ford Mustang</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Newsletter</h4>
-          <p>Get first access to new arrivals, VIP events, and exclusive offers.</p>
-          <form class="newsletter-form" id="newsletterForm">
-            <input type="email" placeholder="Your email address" id="nlEmail" required />
-            <button type="submit" id="nlSubmit">→</button>
-          </form>
-          <p class="footer-legal">By subscribing you agree to our Privacy Policy.</p>
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Vehicle Sourcing</a></li>
+            <li><a href="#services">Test Drives</a></li>
+            <li><a href="#services">Financing</a></li>
+            <li><a href="#services">Inspection</a></li>
+            <li><a href="#services">Delivery</a></li>
+          </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2017 Kaifksi Showroom. All rights reserved.</span>
+        <p>© 2024 Kaifksi Showroom. All rights reserved. | Premium Automotive Excellence</p>
         <div class="footer-bottom-links">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Service</a>
@@ -641,6 +571,24 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <!-- ==================== CAR DETAIL MODAL ==================== -->
+  <div class="car-modal-overlay" id="car-modal-overlay">
+    <div class="car-modal" id="car-modal" role="dialog" aria-modal="true" aria-labelledby="modal-car-name">
+      <button class="modal-close" id="modal-close" aria-label="Close modal">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="modal-content" id="modal-content">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== BACK TO TOP ==================== -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- Main Script -->
+  <script src="app.js"></script>
 </body>
 </html>
